@@ -1,6 +1,5 @@
 package WalterOseguera_Lab6;
 
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Lugares {
