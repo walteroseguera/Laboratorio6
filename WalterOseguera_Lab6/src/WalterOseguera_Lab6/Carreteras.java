@@ -10,7 +10,8 @@ public class Carreteras extends Lugares {
         super();
     }
 
-    public Carreteras(int Codigo, double Kilometros, Lugares LugarInicio, Lugares LugarFinal) {
+    public Carreteras(int Codigo, double Kilometros, Lugares LugarInicio, Lugares LugarFinal, String Nombre, String Direccion, int NivelSeguridad, Carreteras Entrada, Carreteras Salida, String TipoLugar) {
+        super(Nombre, Direccion, NivelSeguridad, Entrada, Salida, TipoLugar);
         this.Codigo = Codigo;
         this.Kilometros = Kilometros;
         this.LugarInicio = LugarInicio;
@@ -31,6 +32,22 @@ public class Carreteras extends Lugares {
 
     public void setKilometros(double Kilometros) {
         this.Kilometros = Kilometros;
+    }
+
+    public Lugares getLugarInicio() {
+        return LugarInicio;
+    }
+
+    public void setLugarInicio(Lugares LugarInicio) {
+        this.LugarInicio = LugarInicio;
+    }
+
+    public Lugares getLugarFinal() {
+        return LugarFinal;
+    }
+
+    public void setLugarFinal(Lugares LugarFinal) {
+        this.LugarFinal = LugarFinal;
     }
     
 }

@@ -8,7 +8,8 @@ public class Canchas extends Lugares {
         super();
     }
 
-    public Canchas(String Categoria, String Estado) {
+    public Canchas(String Categoria, String Estado, String Nombre, String Direccion, int NivelSeguridad, Carreteras Entrada, Carreteras Salida, String TipoLugar) {
+        super(Nombre, Direccion, NivelSeguridad, Entrada, Salida, TipoLugar);
         this.Categoria = Categoria;
         this.Estado = Estado;
     }
@@ -27,6 +28,11 @@ public class Canchas extends Lugares {
 
     public void setEstado(String Estado) {
         this.Estado = Estado;
+    }
+
+    @Override
+    public String toString() {
+        return Categoria;
     }
     
 }

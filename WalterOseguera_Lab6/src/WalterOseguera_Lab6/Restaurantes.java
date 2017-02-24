@@ -8,11 +8,12 @@ public class Restaurantes extends Lugares {
         super();
     }
 
-    public Restaurantes(String Categoria, int Calificacion) {
+    public Restaurantes(String Categoria, int Calificacion, String Nombre, String Direccion, int NivelSeguridad, Carreteras Entrada, Carreteras Salida, String TipoLugar) {
+        super(Nombre, Direccion, NivelSeguridad, Entrada, Salida, TipoLugar);
         this.Categoria = Categoria;
         this.Calificacion = Calificacion;
     }
-
+    
     public String getCategoria() {
         return Categoria;
     }
@@ -27,6 +28,11 @@ public class Restaurantes extends Lugares {
 
     public void setCalificacion(int Calificacion) {
         this.Calificacion = Calificacion;
+    }
+
+    @Override
+    public String toString() {
+        return Categoria;
     }
     
 }

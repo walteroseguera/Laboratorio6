@@ -7,17 +7,20 @@ public class Lugares {
     private String Nombre;
     private String Direccion;
     private int NivelSeguridad;
-    private ArrayList<Carreteras> Entrada = new ArrayList();
-    private ArrayList<Carreteras> Salida = new ArrayList();
-    private ArrayList TipoLugar = new ArrayList();
+    private Carreteras Entrada;
+    private Carreteras Salida;
+    private String TipoLugar;
 
     public Lugares() {
     }
 
-    public Lugares(String Nombre, String Direccion, int NivelSeguridad) {
+    public Lugares(String Nombre, String Direccion, int NivelSeguridad, Carreteras Entrada, Carreteras Salida, String TipoLugar) {
         this.Nombre = Nombre;
         this.Direccion = Direccion;
         this.NivelSeguridad = NivelSeguridad;
+        this.Entrada = Entrada;
+        this.Salida = Salida;
+        this.TipoLugar = TipoLugar;
     }
 
     public String getNombre() {
@@ -48,28 +51,33 @@ public class Lugares {
         this.NivelSeguridad = NivelSeguridad;
     }
 
-    public ArrayList<Carreteras> getEntrada() {
+    public Carreteras getEntrada() {
         return Entrada;
     }
 
-    public void setEntrada(ArrayList<Carreteras> Entrada) {
+    public void setEntrada(Carreteras Entrada) {
         this.Entrada = Entrada;
     }
 
-    public ArrayList<Carreteras> getSalida() {
+    public Carreteras getSalida() {
         return Salida;
     }
 
-    public void setSalida(ArrayList<Carreteras> Salida) {
+    public void setSalida(Carreteras Salida) {
         this.Salida = Salida;
     }
 
-    public ArrayList getTipoLugar() {
+    public String getTipoLugar() {
         return TipoLugar;
     }
 
-    public void setTipoLugar(ArrayList TipoLugar) {
+    public void setTipoLugar(String TipoLugar) {
         this.TipoLugar = TipoLugar;
+    }
+
+    @Override
+    public String toString() {
+        return TipoLugar;
     }
     
 }
